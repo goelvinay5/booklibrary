@@ -1,0 +1,23 @@
+<div *ngIf="book">
+    <h2>Check-Out Book: {{ book.title }}</h2>
+    <form (ngSubmit)="checkOut()">
+      <div>
+        <label for="borrowerName">Borrower Name</label>
+        <input type="text" id="borrowerName" [(ngModel)]="borrowerName" name="borrowerName" required>
+      </div>
+      <div>
+        <label for="borrowerMobile">Mobile Number</label>
+        <input type="text" id="borrowerMobile" [(ngModel)]="borrowerMobile" name="borrowerMobile" required>
+      </div>
+      <div>
+        <label for="borrowerNationalID">National ID</label>
+        <input type="text" id="borrowerNationalID" [(ngModel)]="borrowerNationalID" name="borrowerNationalID" required>
+      </div>
+      <div>
+        <label for="returnDate">Return Date</label>
+        <input type="date" id="returnDate" [(ngModel)]="returnDate" name="returnDate" [value]="returnDate | date:'yyyy-MM-dd'" required>
+      </div>
+      <button type="submit">Check-Out</button>
+    </form>
+  </div>
+  

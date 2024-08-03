@@ -1,27 +1,33 @@
 # Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7. and .Net Core 6.0 using MySQL
 
-## Development server
+## Backend
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run the API project first
 
-## Code scaffolding
+## Frontend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Build
+## database
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install MySQL
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+create schema librarydb
 
-## Running end-to-end tests
+update details as following connection string or update the connection string with your schema details
+"Server=localhost; port = 3306;  Database =librarydb; uid=root;Password=Scaler@001"
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+open nuget package manager in API and run following commands
 
-## Further help
+Add-Migration InitialCreate
+Update-Database
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Then Run the API
+
+In swagger, use post method to create few books
+
+
+then you can use frontend

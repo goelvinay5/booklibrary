@@ -1,0 +1,31 @@
+<div *ngIf="book">
+    <h2>Check-In Book: {{ book.title }}</h2>
+    <form (ngSubmit)="checkIn()">
+      <div>
+        <label>Borrower Name</label>
+        <p>{{ book.borrowerName }}</p>
+      </div>
+      <div>
+        <label>Mobile Number</label>
+        <p>{{ book.borrowerMobile }}</p>
+      </div>
+      <div>
+        <label>National ID</label>
+        <p>{{ book.borrowerNationalID }}</p>
+      </div>
+      <div>
+        <label>Actual Return Date</label>
+        <p>{{ actualReturnDate | date }}</p>
+      </div>
+      <div>
+        <label>Required Return Date</label>
+        <p>{{ book.returnDate | date }}</p>
+      </div>
+      <div>
+        <label>Penalty</label>
+        <p>{{ penalty | currency }}</p>
+      </div>
+      <button type="submit">Check-In</button>
+    </form>
+  </div>
+  
